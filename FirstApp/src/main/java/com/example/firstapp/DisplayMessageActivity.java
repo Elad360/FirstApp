@@ -1,25 +1,18 @@
 package com.example.firstapp;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
-import android.support.v4.app.NavUtils;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
+import android.app.Activity;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.os.Build;
+import android.support.v4.app.NavUtils;
 import android.widget.TextView;
 
 public class DisplayMessageActivity extends Activity {
 
+    @SuppressLint("NewApi")
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         // Get the message from the intent
@@ -34,6 +27,7 @@ public class DisplayMessageActivity extends Activity {
         // Set the text view as the activity layout
         setContentView(textView);
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
